@@ -14,4 +14,12 @@ stages{
         git branch: 'test', credentialsId: '7a995ee0-a7bf-406d-8373-c17778085066', url: 'https://github.com/joystitch/Python.git'        
 }
 }
+post{
+    failure{
+        echo "failed! please check the test result!"
+}
+    success{
+        echo "success!"
+}
+}
 }
