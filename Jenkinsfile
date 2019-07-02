@@ -1,4 +1,4 @@
-def FAILED_STAGE {}= null
+def FAILED_STAGE = null
 
 pipeline{
     agent {
