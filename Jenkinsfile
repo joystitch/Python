@@ -12,6 +12,13 @@ pipeline{
             input{
                 message "Python release"
                 ok "Start"
+                parameter{
+                    string(
+                        name: 'VERSION',
+                        defaultValue: '0.0.0',
+                        description: 'please input release version'
+                    )
+                }
             }
         }
         stage('checkout code'){
