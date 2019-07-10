@@ -12,7 +12,7 @@ pipeline{
             input{
                 message "Python release"
                 ok "Start"
-                parameter{
+                parameters{
                     string(
                         name: 'VERSION',
                         defaultValue: '0.0.0',
