@@ -2,7 +2,7 @@ def FAILED_STAGE = null
 
 pipeline{
     agent {
-        lable 'testci'
+        label 'testci'
     }
     environment {
         GITLAB_COMMON_CREDS = credentials('0f283a85-77da-4bb5-9d53-1d50e1e16608')
