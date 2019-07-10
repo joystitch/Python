@@ -2,12 +2,18 @@ def FAILED_STAGE = null
 
 pipeline{
     agent {
-        label 'testci'
+        lable 'testci'
     }
     environment {
         GITLAB_COMMON_CREDS = credentials('0f283a85-77da-4bb5-9d53-1d50e1e16608')
     }
     stages{
+        stage('update version'){
+            input{
+                message "Python release"
+                ok "Start"
+            }
+        }
         stage('checkout code'){
             steps{
                 script {FAILED_STAGE = env.STAGE_NAME}
